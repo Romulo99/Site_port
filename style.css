@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  flex-wrap: nowrap;
 }
 
 /*cabecalho*/
@@ -44,7 +45,7 @@ span {
 nav ul li {
   display: inline-block;
   margin: 0 10px;
-  font-size: 1.7em;
+  font-size: 2em;
   transition: 300ms all;
 }
 
@@ -55,7 +56,7 @@ li a {
 }
 
 ul li:hover {
-  font-size: 1.8em;
+  font-size: 2.2em;
 }
 
 ul li a:hover {
@@ -192,3 +193,45 @@ h2 {
 
 /*portfolio*/
 
+/*Layout responsivo*/
+@media screen and (max-width: 978px) {
+  .titulo {
+    margin: 0;
+    padding: 20px 0 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contato .botao {
+    display: inline-block;
+  }
+
+  .menu nav ul li a {
+    visibility: hidden;
+    display: none;
+  }
+
+  .contato .email {
+    width: 290px;
+  }
+
+  .contato .botao {
+    display: block;
+    position: static;
+    margin: 5px 10px;
+  }
+
+  h3{
+    margin: 15px;
+  }
+
+  .card-servicos p {
+    color: white;
+    visibility: visible;
+  }
+
+  .box-servicos {
+    flex-wrap: wrap;
+  }
+}
